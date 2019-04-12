@@ -5,6 +5,8 @@ import Comment from './Comment';
 class CommentList extends Component {
   constructor(props) {
     super(props);
+    // Init state inside constructor
+    // State is an object
     this.state = {
       commentList: ["Comment 1", "Comment 2"],
     };
@@ -15,8 +17,9 @@ class CommentList extends Component {
       <div>
         {
           // map function is something like foreach
-          // Here, for each 'comment' in commentList
-          // we render a Comment component and pass in data by props
+          // Here, for each 'comment' in commentList,
+          // we render a Comment component and pass in data by props ('content' is the props name,
+          // 'comment' is the data we pass to Comment)
           this.state.commentList.map(comment => {
             return (
               <Comment content={comment} />

@@ -6,6 +6,8 @@ class CommentSection extends Component {
   render() {
     return (
       <div className="CommentSection">
+        <p>CommentSection</p>
+        <hr />
         <CommentList />
       </div>
     );
