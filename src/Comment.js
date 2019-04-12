@@ -12,7 +12,6 @@ class Comment extends Component {
 
   switchLikeState = () => {
     // This function sets 'liked' to false when it is true, and sets it to true when it's false
-    console.log("HI", this.state.liked);
     this.setState(prevState => ({
       liked: !prevState.liked,
     }))
@@ -27,7 +26,7 @@ class Comment extends Component {
             {/*
               Ternary operator for ES6:
               condition ? whenTrue : whenFalse
-              We need to put code below inside curly braces because we're using Javascript inside HTML
+              We need to put code below inside curly braces because we're using Javascript inside HTML (JSX)
             */}
             {this.state.liked ? <p>Liked</p> : <p>Like Please</p>}
             <input className="LikeButton" type="image" src={LikeButton} alt="like" onClick={() => this.switchLikeState()} />
@@ -39,4 +38,5 @@ class Comment extends Component {
   }
 }
 
+// For every class we need to export it so that we could use it in other classes
 export default Comment;

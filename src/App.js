@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import CommentSection from './CommentSection.js';
 
+// This is the main app
 class App extends Component {
   render() {
     return (
@@ -11,6 +12,7 @@ class App extends Component {
           <p>Comment and Like App</p>
           <img src={logo} className="App-logo" alt="logo" />
         </header>
+        {/* We put the CommentSection component that we've created here */}
         <CommentSection />
       </div>
     );

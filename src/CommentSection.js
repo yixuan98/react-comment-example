@@ -8,6 +8,8 @@ class CommentSection extends Component {
     super(props);
     // Init state inside constructor
     // State is an object
+    // Props is also an object
+    // We could access them by: this.props.something or this.state.something
     this.state = {
       commentList: ["Comment 1", "Comment 2"],
     };
@@ -17,10 +19,13 @@ class CommentSection extends Component {
     const { commentList } = this.state;
     return (
       <div className="CommentSection">
-        <p>Comment Section</p>
+        <p style={{ fontWeight: 'bold' }}>Comment Section</p>
         <hr />
         <CommentList commentList={commentList} />
-        <CommentEditor addComment={this.addComment}/>
+        {/*
+          We've defined addComment() and we pass the function to CommentEditor as props, we'll then call the function inside CommentEditor
+        */}
+        <CommentEditor addCommentFunction={this.addComment}/>
       </div>
     );
   }

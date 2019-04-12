@@ -4,6 +4,8 @@ import Comment from './Comment';
 
 class CommentList extends Component {
   render() {
+    // ES6 Object destructuring
+    // Recieved commentList from CommentSection
     const { commentList } = this.props;
     return (
       <div>

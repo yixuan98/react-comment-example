@@ -27,8 +27,8 @@
 }
 
 .CommentEditor .InputBox {
-  width: 98%;
-  height: 3vh;
+  width: 50%;
+  height: 4vh;
   padding-left: 1vh;
   padding-right: 1vh;
   text-align: center;

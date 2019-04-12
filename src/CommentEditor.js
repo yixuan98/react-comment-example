@@ -10,7 +10,9 @@ class CommentEditor extends Component {
   }
 
   render() {
+    // ES6 Object destructuring
     const { userComment } = this.state;
+
     return (
       <div className="CommentEditor">
         <input className="InputBox" placeholder="Add a comment..." onChange={comment => this.setComment(comment.target.value)} />
@@ -26,9 +28,15 @@ class CommentEditor extends Component {
   }
 
   addComment = comment => {
-    const { addComment } = this.props;
+    // ES6 Object Destructuring
+    // Basically doing the same thing as:
+    // const addCommentFunction = this.props.addCommentFunction;
+    // We take the addCommentFunction out from props
+    const { addCommentFunction } = this.props;
+
     if (comment !== "" && comment !== null) {
-      addComment(comment);
+      // Call the addCommentFunction from CommentSection
+      addCommentFunction(comment);
     }
   }
 }
